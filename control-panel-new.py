@@ -42,8 +42,8 @@ ledState = 'LED State Unknown'
 
 button = Pin(15, Pin.IN, Pin.PULL_UP)
 
-ssid = 'BTHub6-P5GR'
-password = 'Breed77!'
+ssid = ''
+password = ''
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
@@ -108,6 +108,8 @@ while True:
         
         print( 'led on = ' + str(led_on))
         print( 'led off = ' + str(led_off))
+        
+# Neopixel cycles once then stays static off button works but need if LED_on to loop until led off hit.        
         
         if led_on == 8:
                 print("led on")
